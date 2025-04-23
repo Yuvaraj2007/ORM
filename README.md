@@ -23,18 +23,18 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-'''
-admin.py
-from django.contrib import admin
-from .models import Movie,MovieAdmin
-admin.site.register(Movie,MovieAdmin)
+       '''
+       admin.py
+       from django.contrib import admin
+       from .models import Movie,MovieAdmin
+       admin.site.register(Movie,MovieAdmin)
 
-models.py
-from django.db import models
-from django.contrib import admin
+       models.py
+       from django.db import models
+       from django.contrib import admin
 
 
-class Movie(models.Model):
+     class Movie(models.Model):
     user_id = models.CharField(max_length=20, help_text="User ID")
     user_name = models.CharField(max_length=100)
     email_id = models.EmailField()
@@ -44,9 +44,9 @@ class Movie(models.Model):
     no_of_seats = models.IntegerField()
     genre=models.CharField(max_length=20)
 
-class MovieAdmin(admin.ModelAdmin):
+    class MovieAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'user_name', 'email_id', 'phone_number', 'movie_name', 'show_datetime', 'no_of_seats','genre')
-'''
+    '''
 
 
 ## OUTPUT
